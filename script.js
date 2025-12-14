@@ -1,3 +1,5 @@
+const TOTAL_BG_IMAGES = 10; // q1.png → q10.png
+
 const preloadImages = [
   "assets/images/q1.png",
   "assets/images/q2.png",
@@ -142,8 +144,10 @@ function next() {
 function render() {
   screen.style.opacity = 0;
   setTimeout(() => {
+    const bgIndex = Math.min(page + 1, TOTAL_BG_IMAGES);
     screen.style.backgroundImage =
-      `url(assets/images/q${Math.min(page+1,7)}.png)`;
+      `url(assets/images/q${bgIndex}.png)`;
+
     screen.innerHTML = pages[page]();
     screen.style.opacity = 1;
     initLogic();
@@ -231,5 +235,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   }, 400);
 });
+
 
 
