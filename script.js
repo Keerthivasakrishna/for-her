@@ -7,7 +7,7 @@ const preloadImages = [
   "assets/images/q6.png",
   "assets/images/q7.png",
   "assets/images/q8.png",
-  "assets/images/q9png",
+  "assets/images/q9.png",
   "assets/images/q10.png",
   "assets/bears/hi.png",
   "assets/bears/guitar.png",
@@ -267,6 +267,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   }, 400);
 });
+
 
 
 
