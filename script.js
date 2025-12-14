@@ -1,5 +1,3 @@
-const TOTAL_BG_IMAGES = 10; // q1.png → q10.png
-
 const preloadImages = [
   "assets/images/q1.png",
   "assets/images/q2.png",
@@ -144,9 +142,23 @@ function next() {
 function render() {
   screen.style.opacity = 0;
   setTimeout(() => {
-    const bgIndex = Math.min(page + 1, TOTAL_BG_IMAGES);
-    screen.style.backgroundImage =
-      `url(assets/images/q${bgIndex}.png)`;
+    const bgForPage = [
+  1,  // welcome
+  2,  // quote 1
+  3,  // quote 2
+  4,  // quote 3
+  5,  // quote 4
+  6,  // quote 5
+  7,  // quote 6
+  8,  // bubble game
+  9,  // breathing
+  10, // text box
+  10  // end
+];
+
+const bgIndex = bgForPage[page] || 10;
+screen.style.backgroundImage = `url(assets/images/q${bgIndex}.png)`;
+
 
     screen.innerHTML = pages[page]();
     screen.style.opacity = 1;
@@ -235,6 +247,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   }, 400);
 });
+
 
 
 
