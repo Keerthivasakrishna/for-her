@@ -104,10 +104,10 @@ const pages = [
 () => `
 <div class="overlay"></div>
 <div class="content">
-  <p class="quote">If you want to share</p>
+  <p class="quote">If you want to share anything about how you feel</p>
 
   <form id="messageForm">
-    <textarea name="message" placeholder="You can write anything here…" required></textarea>
+    <textarea name="message" placeholder="You can write here…" required></textarea>
     <button type="submit">Send</button>
   </form>
 
@@ -266,6 +266,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   }, 400);
 });
+
 
 
 
