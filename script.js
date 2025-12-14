@@ -173,16 +173,36 @@ function initLogic() {
 
   const area = document.getElementById("bubbles");
   if (area) {
-    ["self doubt","comparison","fear","anxiety","pressure"].forEach(word=>{
-      const b=document.createElement("div");
-      b.className="bubble";
-      b.textContent=word;
-      b.style.left=Math.random()*70+"%";
-      b.style.top=Math.random()*70+"%";
-      b.onclick=()=>b.classList.add("pop");
-      area.appendChild(b);
-    });
-  }
+  const words = ["self doubt","comparison","fear","anxiety","pressure"];
+  let popped = 0;
+
+  words.forEach((word, i) => {
+    const b = document.createElement("div");
+    b.className = "bubble";
+    b.textContent = word;
+
+    /* spread bubbles vertically to avoid overlap */
+    b.style.left = (10 + Math.random() * 60) + "%";
+    b.style.top  = (i * 18 + 5) + "%";
+
+    b.onclick = () => {
+      if (b.classList.contains("pop")) return;
+
+      b.classList.add("pop");
+      popped++;
+
+      /* when all bubbles are popped */
+      if (popped === words.length) {
+        setTimeout(() => {
+          next();
+        }, 600);
+      }
+    };
+
+    area.appendChild(b);
+  });
+}
+
 
   const breathText = document.getElementById("breathText");
   const breathBtn = document.getElementById("breathNext");
@@ -247,6 +267,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   }, 400);
 });
+
 
 
 
