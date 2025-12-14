@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>A Quiet Space</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <link rel="stylesheet" href="style.css">
+  <!-- PRELOAD IMAGES -->
+<link rel="preload" href="assets/images/q1.png" as="image">
+<link rel="preload" href="assets/images/q2.png" as="image">
+<link rel="preload" href="assets/images/q3.png" as="image">
+<link rel="preload" href="assets/images/q4.png" as="image">
+<link rel="preload" href="assets/images/q5.png" as="image">
+<link rel="preload" href="assets/images/q6.png" as="image">
+<link rel="preload" href="assets/images/q7.png" as="image">
+
+<link rel="preload" href="assets/bears/hi.png" as="image">
+<link rel="preload" href="assets/bears/umbrella.png" as="image">
+
+</head>
+<body>
+<div id="loader">
+  <div class="loader-content">
+    <p>Take a breath…</p>
+    <span></span>
+  </div>
+</div>
+
+<div id="musicToggle">🎵</div>
+
+<audio id="bgMusic" preload="auto" loop>
+  <source src="assets/music/calm.mp3" type="audio/mpeg">
+</audio>
+
+<div id="screen"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
