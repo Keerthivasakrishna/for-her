@@ -87,6 +87,7 @@ const pages = [
 () => `
 <div class="overlay"></div>
 <div class="content">
+  <div class="bear"><img src="assets/bears/guitar.png"></div>
   <p class="quote">Let go of what feels heavy</p>
   <div class="bubble-area" id="bubbles"></div>
   <button onclick="next()">Continue</button>
@@ -230,4 +231,5 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   }, 400);
 });
+
 
