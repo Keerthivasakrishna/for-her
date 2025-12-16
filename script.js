@@ -30,7 +30,7 @@ function preloadAll() {
 /***********************
  * CHANGE THESE TWO
  ***********************/
-const HER_NAME = "Pallabi"; // 👈 put her name here
+const HER_NAME = "Pal 💖"; // 👈 put her name here
 const FORMSPREE_URL = "https://formspree.io/f/mgvgqpok"; // 👈 put your Form ID here
 
 /***********************
@@ -266,6 +266,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   }, 400);
 });
+
 
 
 
